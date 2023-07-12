@@ -1,0 +1,30 @@
+@import "../index.scss";
+
+
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 220px);
+    float: right;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background-color: hsl(var(--primary--bg));
+    border-bottom: 1px solid rgb(117, 117, 117);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    .profile {
+      background-image: url(https://github.com/Sainath055/Sainath055.github.io/blob/main/assets/portfolio_pic.jpg?raw=true);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      font-size: 20px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+    }
+  }

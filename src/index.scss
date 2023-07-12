@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin flex_itemscenter {
+  display: flex;
+  align-items: center;
+}
+
+
+:root {
+  --hue: 160;
+
+  --heading: 25px;
+  --menu: 16px;
+  --buttons: 16px;
+
+  /* Light Mode */
+  --bg--light: var(--hue) 0% 94%;
+  --primary--light: var(--hue) 2% 88%;
+  --card--light: var(--hue) 0% 98%;
+
+  /* Dark Mode */
+  --bg--dark: var(--hue) 0% 13%;
+  --primary--dark: var(--hue) 2% 19%;
+  --card--dark: var(--hue) 0% 24%;
+
+  --color--select: var(--hue) 86% 25%;
+  --color--select: var(--hue) 86% 25%;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--bg--dark);
+    --primary--bg: var(--primary--dark);
+    --card--bg: var(--card--dark);
+    --custom1: var(--color--select); 
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: var(--bg--light);
+    --primary--bg: var(--primary--light);
+    --card--bg: var(--card--light);
+    --custom1: var(--color--select); 
+    color-scheme: light;
+  }
+}
+
+:root[color-scheme="dark"] {
+  --bg: var(--bg--dark);
+  --primary--bg: var(--primary--dark);
+  --card--bg: var(--card--dark);
+  --custom1: var(--color--select); 
+  color-scheme: dark;
+}
+
+:root[color-scheme="light"] {
+  --bg: var(--bg--light);
+  --primary--bg: var(--primary--light);
+  --card--bg: var(--card--light);
+  --custom1: var(--color--select); 
+  color-scheme: light;
+}
+
+
+body {
+ 
+  background-color: hsl(var(--bg));
+  width: 100%;
+  height: max-content;
+  min-height: 100vh;
+}
+
+#content {
+  width: calc(100% - 220px);
+  margin-top: 70px;
+  min-height: 90vh;
+  max-height: max-content;
+  float: right;
+  padding: 20px;
+}
+
+@mixin normal_shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@mixin shadow_hover {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+
+

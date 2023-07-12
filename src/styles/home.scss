@@ -1,0 +1,53 @@
+@import "../index.scss";
+
+
+#Home_top_div {
+    @include flex_itemscenter;
+    justify-content: space-between;
+    padding: 5px 20px;
+    h2 {
+        font-size: var(--heading);
+        font-weight: 600;
+    }
+    button {
+        @include flex_itemscenter;
+        gap: 4px;
+        padding: 10px 18px;
+        font-size: var(--buttons);
+        background-color: hsl(var(--custom1));
+        color: #f0f0f0;
+        border-radius: 7px;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        filter: brightness(1.35);
+    }
+}
+
+#home_cards_div {
+    @include flex_itemscenter;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding: 20px 20px;
+    width: 100%;
+    height: max-content
+}
+
+.home_card {
+    width: max-content;
+    height: max-content;
+    @include flex_itemscenter;
+    flex-direction: column;
+    padding: 12px 25px;
+    background-color: hsl(var(--primary--bg));
+    border-radius: 7px;
+    h2 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    p {
+        font-size: 18px;
+    }
+}
