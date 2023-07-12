@@ -11,8 +11,4 @@ jobs:
       - uses: actions/checkout@v3
       - run: npm ci
       - run: npm test
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_CUSTOM_UI_28013 }}"
-          projectId: custom-ui-28013
+      - run: npm run build
