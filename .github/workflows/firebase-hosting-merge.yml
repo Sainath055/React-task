@@ -13,8 +13,9 @@ jobs:
       - uses: actions/checkout@v3
       - run: npm ci
       - run: npm test
-      - uses: w9jds/firebase-action@main
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_CUSTOM_UI_28013 }}"
+          channelId: live
+          projectId: custom-ui-28013
